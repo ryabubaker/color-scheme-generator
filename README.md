@@ -1,4 +1,4 @@
-# 🎨 Color Scheme Generator
+# Color Scheme Generator
 
 > A lightweight, elegant vanilla JavaScript web application that instantly generates harmonious color palettes based on a seed color. Built with a clean UI and integrated with **The Color API**.
 
@@ -6,25 +6,24 @@
 
 ## 📑 Table of Contents
 
-* [Introduction](https://www.google.com/search?q=%23-introduction)
-* [Key Features](https://www.google.com/search?q=%23-key-features)
-* [Project Structure](https://www.google.com/search?q=%23-project-structure)
-* [Installation Guide](https://www.google.com/search?q=%23-installation-guide)
-* [Usage](https://www.google.com/search?q=%23-usage)
-* [API Reference](https://www.google.com/search?q=%23-api-reference)
-* [Environment Variables](https://www.google.com/search?q=%23-environment-variables)
+* [Introduction](#introduction)
+* [Key Features](#key-features)
+* [Project Structure](#project-structure)
+* [Installation Guide](#installation-guide)
+* [Usage](#usage)
+* [API Reference](#api-reference)
 
 ---
 
-## 🚀 Introduction
+## Introduction
 
-The **Color Scheme Generator** is a frontend application designed for developers and designers to quickly explore color combinations. By leveraging [The Color API](https://www.google.com/search?q=https://www.thecolorapi.com/), it dynamically generates 5-color palettes based on a user-selected base color and a chosen color theory rule (e.g., Monochrome, Triad, Complementary).
+The **Color Scheme Generator** is a frontend application designed for developers and designers to quickly explore color combinations. By leveraging [The Color API](https://www.thecolorapi.com/), it dynamically generates 5-color palettes based on a user-selected base color and a chosen color theory rule (e.g., Monochrome, Triad, Complementary).
 
 The app features a modern, grid-based interface with smooth hover interactions and a convenient click-to-copy clipboard integration.
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 * **Dynamic Palette Generation:** Generates palettes based on 8 different color harmony rules.
 * **Random Initial State:** Auto-generates a random hex color on page load so the interface is never empty.
@@ -34,7 +33,7 @@ The app features a modern, grid-based interface with smooth hover interactions a
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 | File | Role | Description |
 | --- | --- | --- |
@@ -44,26 +43,26 @@ The app features a modern, grid-based interface with smooth hover interactions a
 
 ---
 
-## 🛠 Installation Guide
+## Installation Guide
 
 Because this project relies entirely on native browser features and vanilla web technologies, there are no package managers, build tools, or compilers required.
 
 1. **Clone the repository** (or download the source files):
 ```bash
-git clone https://github.com/your-username/color-scheme-generator.git
+git clone https://github.com/ryabubaker/color-scheme-generator.git
 
 ```
 
-
 2. **Navigate to the directory**:
+
 ```bash
 cd color-scheme-generator
 
 ```
 
-
 3. **Run the application**:
 Simply open the `index.html` file in your preferred modern web browser.
+
 ```bash
 # On macOS
 open index.html
@@ -73,33 +72,31 @@ start index.html
 
 ```
 
-
-
 > 💡 **Tip for Developers:** If you want to run this through a local server for development, you can use an extension like VS Code Live Server or run `npx serve .` in your terminal.
 
 ---
 
-## 💻 Usage
+## Usage
 
 1. **Select a Base Color:** Click the color picker in the top left to choose your seed color.
 2. **Choose a Harmony Mode:** Use the dropdown menu to select a color theory relationship:
+
 * Monochrome / Monochrome Dark / Monochrome Light
 * Analogic / Analogic Complement
 * Complement
 * Triad
 * Quad
 
-
 3. **Generate:** Click the **"Get color scheme"** button. The app will fetch and render 5 complementary colors.
 4. **Copy to Clipboard:** Click directly on any of the resulting color blocks or their hex labels. A temporary "Copied!" message will confirm the action.
 
 ---
 
-## 🔗 API Reference
+## API Reference
 
 This project fetches data from **The Color API**.
 
-**Endpoint:** `GET [https://www.thecolorapi.com/scheme](https://www.thecolorapi.com/scheme)`
+**Endpoint:** `GET https://www.thecolorapi.com/scheme`
 
 ### Query Parameters
 
@@ -114,7 +111,7 @@ This project fetches data from **The Color API**.
 ```javascript
 function fetchColorArray(color, scheme) {
   return fetch(
-    `https://www.thecolorapi.com/scheme?hex=${color.replace("#", "")}&mode=${scheme}&count=5`
+    `[https://www.thecolorapi.com/scheme?hex=$](https://www.thecolorapi.com/scheme?hex=$){color.replace("#", "")}&mode=${scheme}&count=5`
   )
     .then((res) => res.json())
     .then((data) => {
